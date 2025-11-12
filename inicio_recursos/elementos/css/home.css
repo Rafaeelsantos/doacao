@@ -1,0 +1,642 @@
+.alerta-container {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #e53935, #ef6c00);
+  color: white;
+  border-radius: 16px;
+  padding: 20px 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  max-width: 9000px;
+  gap: 20px;
+}
+
+.alerta-icone {
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+}
+
+.alerta-conteudo h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.alerta-conteudo p {
+  font-size: 1.1rem;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+
+main {
+    padding: 50px 60px;
+}
+
+.welcome {
+    margin-top: 20px;
+}
+
+.welcome h2 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #0056c9;
+}
+
+.welcome span {
+    color: #007bff;
+}
+
+.welcome p {
+    margin-top: 8px;
+    color: #555;
+    font-size: 30px;
+}
+
+/* ===== SALDO CARD ===== */
+.saldo-card {
+    margin-top: 30px;
+    background: linear-gradient(135deg, #007bff, #1ec97d);
+    border-radius: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.saldo-info h3 {
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.saldo-info h1 {
+    font-size: 42px;
+    margin: 10px 0;
+}
+
+.saldo-info p {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.saldo-info img {
+    width: 16px;
+}
+
+.pontos {
+    text-align: right;
+}
+
+.pontos img {
+    width: 22px;
+    filter: brightness(0) invert(1);
+}
+
+.pontos p {
+    font-size: 14px;
+}
+
+.pontos h3 {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+
+
+
+/* ==== SEÇÃO DE EVENTOS ==== */
+.eventos-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 30px;
+  margin: 40px auto;
+  width: 100%;
+  max-width: 100%; /* Igual à largura do saldo */
+  padding: 0 50px; /* mesmo padding lateral do .saldo-card */
+  box-sizing: border-box;
+}
+
+.evento-card {
+  position: relative;
+  flex: 1; /* faz os dois cards ocuparem o mesmo espaço */
+  min-height: 280px;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.evento-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.evento-conteudo {
+  padding: 24px 30px;
+  z-index: 2;
+}
+
+.evento-conteudo h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.evento-conteudo p {
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+/* ==== FUNDOS COM GRADIENTE E IMAGEM ==== */
+.evento-card.azul {
+  background:
+    linear-gradient(0deg, rgba(0, 0, 255, 0.55), rgba(0, 0, 255, 0) 60%),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_IV-yCKHX-Om619sTs_qN0O4uj1dWp31OVQ&s") center/cover;
+}
+
+.evento-card.vermelho {
+  background:
+    linear-gradient(0deg, rgba(150, 40, 0, 0.6), rgba(150, 40, 0, 0) 60%),
+    url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_IV-yCKHX-Om619sTs_qN0O4uj1dWp31OVQ&s") center/cover;
+}
+
+/* ==== Responsividade ==== */
+@media (max-width: 900px) {
+  .eventos-container {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .evento-card {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==== SEÇÃO DE NOTÍCIAS ==== */
+.noticias-bloco {
+  background: #eef8f7;
+  padding: 40px 60px;
+  border-radius: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.noticias-titulo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #153b5a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.noticias-container {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+/* ==== CARD BASE ==== */
+.noticia-card {
+  flex: 1;
+  min-width: 320px;
+  background: white;
+  border-radius: 14px;
+  padding: 22px 26px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  border: 1px solid transparent;
+  transition: transform .3s ease;
+}
+
+.noticia-card:hover {
+  transform: translateY(-4px);
+}
+
+.noticia-icone {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+/* ==== ALERTA (VERMELHO) ==== */
+.noticia-card.alerta {
+  background: linear-gradient(135deg, #ffe5e5, #ffd4d4);
+  border: 1px solid #ffb6b6;
+  animation: piscarAlerta 2s infinite ease-in-out;
+}
+
+.noticia-card.alerta h3 {
+  color: #b50000;
+  font-weight: 700;
+}
+
+.noticia-card.alerta .noticia-icone {
+  background: rgba(255, 0, 0, 0.1);
+  color: #a00000;
+}
+
+/* ==== ANIMAÇÃO DE ALERTA (PISCAR) ==== */
+@keyframes piscarAlerta {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(255, 0, 0, 0);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+  }
+}
+
+/* ==== OUTROS CARDS ==== */
+.noticia-card.azul {
+  background: linear-gradient(135deg, #1e72f3, #00b4ff);
+  color: #fff;
+}
+
+
+
+.noticia-card.azul-claro {
+  background: #e8f9ff;
+  border: 1px solid #bfe9ff;
+  color: #002a4d;
+}
+
+/* ==== CONTEÚDO ==== */
+.noticia-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.noticia-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.noticia-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.hoje {
+  color: #b80000;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
+.impacto-geral {
+    padding: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.impacto-geral h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    text-align: left;
+    width: 100%;
+}
+
+
+.card {
+    flex: 1;
+    min-width: 450px;
+    max-width: 600px;
+    min-height: 180px;
+    max-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    border-radius: 16px;
+    color: #fff;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card.azul {
+    background: linear-gradient(135deg, #2980f3, #05c1f2);
+}
+
+.card.verde {
+    background: linear-gradient(135deg, #02c17c, #00cfa5);
+}
+
+.card.verde2 {
+    background: linear-gradient(135deg, #00cfa5, #00b385);
+}
+
+.card .info h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.card .info p {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.card .icone {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .icone i {
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+/* Container principal */
+.impacto {
+  background: #fff;
+  border-radius: 16px;
+  padding: 50px 30px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  max-width: none;
+  width: 100%;
+  margin: 40px auto;
+}
+
+.impacto h2 {
+  color: #1d1d1d;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* Cards */
+.impacto-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.impacto-card {
+  flex: 1 1 250px;
+  border-radius: 18px;
+  padding: 40px 20px;
+  background: #f8f9fa;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impacto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+
+/* Ícones */
+.icone {
+  font-size: 40px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+}
+
+/* Textos */
+.impacto-card h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.impacto-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Cores dos cards */
+.azul {
+  background: rgba(0, 123, 255, 0.05);
+}
+
+.azul .icone {
+  background: rgba(0, 123, 255, 0.1);
+  color: #007bff;
+}
+
+.laranja {
+  background: rgba(255, 165, 0, 0.08);
+}
+
+.laranja .icone {
+  background: rgba(255, 165, 0, 0.15);
+  color: #f57c00;
+}
+
+.verde {
+  background: rgba(40, 167, 69, 0.08);
+}
+
+.verde .icone {
+  background: rgba(40, 167, 69, 0.15);
+  color: #28a745;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .impacto-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.donation-banner {
+  position: relative;
+  background: linear-gradient(90deg, #f36b22, #eb4a79);
+  border-radius: 28px;
+  color: white;
+  text-align: center;
+  padding: 80px 40px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  margin: 40px auto;
+  max-width: none;
+  width: 60%;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+}
+
+.donation-banner .heart {
+  font-size: 48px;
+  margin-bottom: 20px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.15); opacity: 0.8; }
+}
+
+.donation-banner h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.donation-banner p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  border: none;
+  border-radius: 50px;
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn.donate {
+  background: white;
+  color: #d73b4a;
+}
+
+.btn.donate:hover {
+  transform: scale(1.05);
+  background: #ffecec;
+}
+
+.btn.learn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255,255,255,0.4);
+}
+
+.btn.learn:hover {
+  background: rgba(255,255,255,0.3);
+  transform: scale(1.05);
+}
+
+/* Círculos decorativos */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+}
+
+.circle-left {
+  width: 300px;
+  height: 300px;
+  bottom: -60px;
+  left: -80px;
+}
+
+.circle-right {
+  width: 350px;
+  height: 350px;
+  top: -80px;
+  right: -100px;
+}

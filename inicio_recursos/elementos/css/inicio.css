@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f3f8fc;
+    color: #333;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background: #fffffff5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* garante que fique acima de tudo */
+}
+
+/* Adicione isto: */
+body {
+  background: #f3f8fc;
+  color: #333;
+  padding-top: 90px; /* espaço igual à altura do header */
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+}
+
+.logo-text h1 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0b5eea;
+}
+
+.logo-text span {
+    font-size: 12px;
+    color: #777;
+}
+
+/* ===== NAV ===== */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+nav ul li:hover {
+    background: #f1f7ff;
+}
+
+nav ul li.active {
+    background: #e5f0ff;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+nav ul li.active a {
+    color: #0b5eea;
+    font-weight: 600;
+}
+
+nav ul li i {
+    width: 18px;
+    height: 18px;
+    color: #0b5eea;
+}
+
+/* ===== USER INFO ===== */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.points span {
+    background: #e9f0ff;
+    color: #0b5eea;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.profile img {
+    width: 35px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: aparecer 0.4s ease forwards;
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-out {
+  opacity: 1;
+  transform: translateY(0);
+  animation: desaparecer 0.3s ease forwards;
+}
+
+@keyframes desaparecer {
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}

@@ -1,0 +1,344 @@
+/* Cabeçalho da seção */
+.recompensa-header {
+    text-align: left;
+    margin: 40px 60px 20px;
+}
+
+.recompensa-header h2 {
+    font-size: 2.5rem;
+    color: #1b6edc;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.recompensa-header p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Card principal */
+.recompensa-card {
+    position: relative;
+    margin: 40px 60px;
+    padding: 40px;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #1b6edc 0%, #00a66f 100%);
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Informações */
+.recompensa-info h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.recompensa-pontos {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.recompensa-mensagem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #dff4ee;
+}
+
+.recompensa-mensagem img {
+    width: 18px;
+    height: 18px;
+}
+
+/* Ícones */
+.recompensa-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.recompensa-titulo img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Presente decorativo */
+.recompensa-presente {
+    opacity: 0.15;
+    position: absolute;
+    right: 60px;
+    bottom: 40px;
+}
+
+.recompensa-presente img {
+    width: 120px;
+    height: 120px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .recompensa-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .recompensa-presente {
+        position: static;
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== WRAPPER (não altera o body) ===== */
+.rewards-wrapper {
+    width: 100%;
+    background: transparent;
+    /* mantém o fundo do site */
+    padding: 40px 20px;
+    /* Se quiser centralizar verticalmente todo o bloco dentro da viewport,
+     descomente as duas linhas abaixo (mas isso altera o fluxo da página):
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+  */
+}
+
+/* ===== CONTAINER CENTRALIZADO =====
+   margem automática centraliza horizontalmente o bloco dentro do fluxo da página.
+*/
+.rewards-container {
+    max-width: 1100px;
+    /* largura do bloco */
+    margin: 0 auto;
+    /* <-- aqui centraliza HORIZONTALMENTE */
+    text-align: center;
+    /* centraliza texto e abas dentro do bloco */
+}
+
+/* header opcional */
+.rewards-header h2 {
+    font-size: 1.8rem;
+    color: #16394f;
+    margin-bottom: 6px;
+}
+
+.rewards-sub {
+    color: #536b74;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+/* ===== ABAS ===== */
+.rewards-tabs {
+    display: flex;
+    justify-content: center;
+    /* centraliza as abas dentro do container */
+    gap: 12px;
+    margin-bottom: 26px;
+}
+
+.tab {
+    border: none;
+    background: #fff;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    color: #444;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+}
+
+.tab.active {
+    color: #0b6cff;
+    box-shadow: 0 4px 12px rgba(11, 108, 255, 0.12);
+}
+
+
+/* ===== GRID DE CARDS (4 por linha) ===== */
+.rewards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* ajustei largura mínima */
+    gap: 40px;
+    /* aumenta o espaço entre os cards */
+    justify-content: center;
+    align-items: start;
+    max-width: 1400px;
+    /* permite 4 cards com espaçamento */
+    margin: 0 auto;
+    padding: 20px 40px;
+    /* adiciona respiro lateral */
+}
+
+
+
+/* ===== CARD ===== */
+.reward-card {
+    width: 100%;
+    /* o grid cuida da largura */
+    max-width: 320px;
+    /* tamanho ideal para 4 por linha */
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(11, 30, 60, 0.07);
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+
+.reward-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(11, 30, 60, 0.10);
+}
+
+/* ===== HEADER DO CARD ===== */
+.reward-header {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #fff;
+}
+
+.gradient-purple {
+    background: linear-gradient(135deg, #c657ff 0%, #ff5c97 100%);
+}
+
+.gradient-blue {
+    background: linear-gradient(135deg, #007bff 0%, #00a878 100%);
+}
+
+.gradient-orange {
+    background: linear-gradient(135deg, #ff7700 0%, #cf7538 100%);
+}
+
+.gradient-green {
+    background: linear-gradient(135deg, #2abfc2 0%, #40cd1d 100%);
+}
+
+
+.gradient-bluu {
+    background: linear-gradient(135deg, #9f43d4 0%, #cc5042 100%);
+}
+
+.reward-icon {
+    font-size: 46px;
+    opacity: .95;
+}
+
+.reward-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: rgba(255, 255, 255, 0.18);
+    padding: 6px 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+/* ===== CORPO DO CARD ===== */
+.reward-body {
+    padding: 18px;
+    text-align: left;
+    /* mantém títulos e descrições alinhados à esquerda dentro do bloco central */
+}
+
+.reward-body h3 {
+    font-size: 1.05rem;
+    color: #132029;
+    margin-bottom: 6px;
+}
+
+.reward-body p {
+    color: #55676b;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+/* ===== RODAPÉ/INFO ===== */
+.reward-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid #f0f2f3;
+    font-weight: 600;
+    color: #3d4b50;
+}
+
+.reward-points {
+    color: #ff7a00;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.reward-points i {
+    color: #ff7a00;
+}
+
+.reward-qty {
+    color: #7b8a8f;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.reward-disabled {
+    margin-top: 12px;
+    background: #f5f6f7;
+    color: #a0a8ab;
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 760px) {
+    .reward-card {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .rewards-container {
+        padding: 0 16px;
+    }
+}
+
+
+.reward-available {
+    margin-top: 12px;
+    background: #e6f8ed;
+    color: #1f8a2f;
+    padding: 8px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+
