@@ -8,21 +8,6 @@ if (session_status() === PHP_SESSION_NONE) {
 
 
 
-<div class="alerta-container">
-    <div class="alerta-icone">
-        ⚠️
-    </div>
-    <div class="alerta-conteudo">
-        <h2>🌪️ AJUDA URGENTE NECESSÁRIA</h2>
-        <p>
-            O Rio Grande do Sul enfrenta <strong>nova tragédia</strong> com ciclone devastador após as enchentes
-            históricas.
-            Milhares de famílias precisam de ajuda <strong>AGORA!</strong>
-        </p>
-    </div>
-</div>
-
-
 
 
 <section class="welcome">
@@ -59,7 +44,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
     <div class="noticias-container">
 
-        <!-- CARD 1: ALERTA VERMELHO (pisca) -->
+
         <div class="noticia-card alerta">
             <div class="noticia-icone">⚠️</div>
             <h3>Ciclone atinge RS com ventos de até 100 km/h</h3>
@@ -71,8 +56,6 @@ if (session_status() === PHP_SESSION_NONE) {
             </div>
         </div>
 
-
-        <!-- CARD 3 -->
         <div class="noticia-card azul-claro">
             <div class="noticia-icone">📰</div>
             <h3>Voluntários trabalham 24h na distribuição de doações</h3>
@@ -85,34 +68,6 @@ if (session_status() === PHP_SESSION_NONE) {
 
     </div>
 </section>
-
-
-
-
-
-
-
-<!-- ==== NOVA SEÇÃO DE EVENTOS CLIMÁTICOS ==== -->
-<section class="eventos-container">
-    <a href="#" class="evento-card azul">
-        <div class="evento-conteudo">
-            <h3>💧 Enchentes Maio/2024</h3>
-            <p>470+ municípios devastados pelas águas</p>
-        </div>
-    </a>
-
-    <a href="#" class="evento-card vermelho">
-        <div class="evento-conteudo">
-            <h3>🌪️ Ciclone 2024</h3>
-            <p>Nova tragédia atinge o estado</p>
-        </div>
-    </a>
-</section>
-
-
-
-
-
 
 
 
@@ -181,21 +136,6 @@ if (session_status() === PHP_SESSION_NONE) {
 
 
 
-
-<section class="donation-banner">
-    <div class="banner-content">
-        <div class="heart">❤️</div>
-        <h2>Cada Segundo Conta!</h2>
-        <p>Milhares de gaúchos estão sem teto, comida ou água potável. Sua doação pode ser a diferença entre desespero e
-            esperança.</p>
-        <div class="buttons">
-            <button class="btn donate" data-page="doacao.php">🚨 Doar Agora</button>
-            <button class="btn learn">Saiba Mais</button>
-        </div>
-    </div>
-    <div class="circle circle-left"></div>
-    <div class="circle circle-right"></div>
-</section>
 
 
 

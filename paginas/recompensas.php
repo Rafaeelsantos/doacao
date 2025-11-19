@@ -1,16 +1,9 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) {
-session_start();
-header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
-header("Cache-Control: post-check=0, pre-check=0", false);
-header("Pragma: no-cache");
-
-
-    header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
-    header("Cache-Control: post-check=0, pre-check=0", false);
-    header("Pragma: no-cache");
-
+    session_start();
 }
+
+
 include "../pagina_de_cadastro_e_login/conexoes/conexao.php";
 
 // Busca todas as recompensas ativas
@@ -94,12 +87,11 @@ $recompensas = $result->fetch_all(MYSQLI_ASSOC);
                             <?php if ($_SESSION['usuario_pontos'] >= $r['pontos_necessarios']): ?>
                                 <div class="reward-available">🎉 Você pode resgatar!</div>
 
-                                <form action="paginas/resgatar.php" method="POST" class="reward-form">
-                                    <input type="hidden" name="id_recompensa" value="<?= $r['id'] ?>">
-                                    <button type="submit" class="resgatar-btn">
+                                <div class="reward-form">
+                                    <a class="resgatar-btn" href="paginas/resgatar.php?id=<?= $r['id'] ?>">
                                         <i class="fas fa-hand-holding-heart"></i> Resgatar
-                                    </button>
-                                </form>
+                                    </a>
+                                </div>
                             <?php else: ?>
                                 <div class="reward-disabled">
                                     Faltam <?= $r['pontos_necessarios'] - $_SESSION['usuario_pontos'] ?> pontos
@@ -114,6 +106,12 @@ $recompensas = $result->fetch_all(MYSQLI_ASSOC);
         </div>
     </div>
 </section>
+
+
+
+
+
+
 
 <style>
     .resgatar-btn {
