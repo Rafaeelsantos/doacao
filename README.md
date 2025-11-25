@@ -29,6 +29,3 @@ A aplicação atua como um ponto central de comunicação e gestão de doações
 - 🤲 Registro detalhado de doações  
 - 🎁 Área de recompensas  
 - 🧾 Histórico de ações  
-
-## 🚀 Como Executar o Projeto
-1. Clone este repositório:
