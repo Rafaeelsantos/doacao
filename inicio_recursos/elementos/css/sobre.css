@@ -1,0 +1,244 @@
+.stats-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.stats-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #1b1b1b;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background: white;
+    width: 230px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card .icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 24px;
+    color: white;
+}
+
+/* Cores dos ícones */
+.blue {
+    background: #2a7cf7;
+}
+
+.green {
+    background: #00bb63;
+}
+
+.orange {
+    background: #ff6c2e;
+}
+
+.pink {
+    background: #ff4f7b;
+}
+
+.stat-card h3 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.stat-card p {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #444;
+}
+
+
+
+
+
+.timeline-wrapper {
+    padding: 40px 30px;
+    background: #f3fbff;
+    border-radius: 20px;
+}
+
+.timeline-wrapper h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.timeline-item {
+    display: flex;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    position: relative;
+    background: white;
+    border-left: 5px solid;
+}
+
+/* Ícones circulares */
+.timeline-icon {
+    min-width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+/* Conteúdo */
+.timeline-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    line-height: 1.6;
+}
+
+/* Badge AGORA */
+.badge {
+    background: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+/* Cores individuais */
+.timeline-item.blue {
+    background: #e5f5ff;
+    border-color: #2892ff;
+}
+
+.timeline-item.blue .timeline-icon {
+    background: #2892ff;
+}
+
+.timeline-item.green {
+    background: #e8fff0;
+    border-color: #1fd477;
+}
+
+.timeline-item.green .timeline-icon {
+    background: #1fd477;
+}
+
+.timeline-item.red {
+    background: #ffeaea;
+    border-color: #ff5b5b;
+}
+
+.timeline-item.red .timeline-icon {
+    background: #ff5b5b;
+}
+
+
+
+.rs-ajuda-container {
+    background: #f0fbff;
+    padding: 50px;
+    border-radius: 20px;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.rs-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+}
+
+.rs-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.rs-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 18px;
+    width: 31%;
+    min-width: 280px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform .2s ease;
+}
+
+.rs-card:hover {
+    transform: translateY(-5px);
+}
+
+.rs-icon {
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.rs-icon-blue {
+    background: linear-gradient(135deg, #0097ff, #006eff);
+}
+
+.rs-icon-green {
+    background: linear-gradient(135deg, #3dd98c, #0bb161);
+}
+
+.rs-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.rs-card p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.rs-info-box {
+    background: #fff;
+    border-left: 5px solid #006eff;
+    margin-top: 40px;
+    padding: 25px;
+    border-radius: 14px;
+    text-align: center;
+    font-size: 17px;
+    color: #444;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}

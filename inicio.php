@@ -43,9 +43,9 @@ if (!isset($_SESSION['usuario_id'])) {
 <body>
     <header>
         <div class="logo">
-            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" alt="Logo">
+            <img src="paginas/imagens/logo.png" alt="Logo">
             <div class="logo-text">
-                <h1>RS Solidário</h1>
+                <h1>Doação</h1>
                 <span>Enchentes RS 2024</span>
             </div>
         </div>
@@ -68,21 +68,45 @@ if (!isset($_SESSION['usuario_id'])) {
                     <i data-lucide="clock"></i>
                     <a href="#">Histórico</a>
                 </li>
-                <li data-page="sobre.html">
+                <li data-page="sobre.php">
                     <i data-lucide="info"></i>
                     <a href="#">Sobre a Causa</a>
                 </li>
             </ul>
         </nav>
 
+
+
         <div class="user-info">
             <div class="points">
-                <span id="pontosUsuario"><?php echo $_SESSION['usuario_pontos'] . " pts"; ?></span>
+                <span id="pontosUsuario">
+                    <?php echo $_SESSION['usuario_pontos'] . " pts"; ?>
+                </span>
             </div>
-            <div class="profile">
+
+            <div class="profile" id="profileButton">
                 <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Usuário">
             </div>
+
+            <!-- Dropdown -->
+            <div class="profile-dropdown" id="profileDropdown">
+                <div class="pd-header">
+                    <strong><?php echo $_SESSION['usuario_nome']; ?></strong>
+                    <span><?php echo $_SESSION['usuario_email']; ?></span>
+                </div>
+
+                <div class="pd-divider"></div>
+
+                <a href="pagina_de_cadastro_e_login/conexoes/logout.php" class="pd-logout">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Sair
+                </a>
+            </div>
+
         </div>
+
+
+
     </header>
 
     <!-- Aqui o conteúdo das páginas será carregado -->
@@ -146,6 +170,25 @@ if (!isset($_SESSION['usuario_id'])) {
             alert('Doação registrada com sucesso!');
         }
     </script>
+
+
+
+    <script>
+        const profileBtn = document.getElementById("profileButton");
+        const dropdown = document.getElementById("profileDropdown");
+
+        profileBtn.addEventListener("click", () => {
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        });
+
+        // fechar ao clicar fora
+        document.addEventListener("click", (e) => {
+            if (!profileBtn.contains(e.target) && !dropdown.contains(e.target)) {
+                dropdown.style.display = "none";
+            }
+        });
+    </script>
+
 
 
 
